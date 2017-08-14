@@ -1,7 +1,14 @@
-import Ract from 'react';
+import React, { Component } from 'react';
 
-const searchBar = () => {
-    return <input/>;
-};
+class SearchBar extends React.Component {
+    render() {
+        return <input onChange={this.onInputChange} />;
+    }
 
-export default searchBar;
+    onInputChange(event) {
+        
+        console.log(" degisti" + Math.random() + event.target.value);
+    }
+}
+
+export default SearchBar;
