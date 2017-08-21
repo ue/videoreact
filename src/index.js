@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import func or comp name from file name  
+import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 
 
 const API_KEY = 'AIzaSyAFP3xIn2wErDV4OMwwHZk2IHYlNmRpmLI';
+
+YTSearch ({key: API_KEY, term: 'surfboards'}, function(data) {
+  console.log(data);
+});
 
 const App = () => {
   return ( 
