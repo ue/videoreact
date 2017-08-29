@@ -8,9 +8,10 @@ class SearchBar extends React.Component {
   }
   render() {
     return (
-      <div>
-        value={this.state.term}
-        <input onChange={event => this.setState({ term: event.target.value })} />
+      <div className="search-bar">
+        <input 
+          value={this.state.term}
+          onChange={event => this.setState({ term: event.target.value })} />
       </div>
     );
   }
